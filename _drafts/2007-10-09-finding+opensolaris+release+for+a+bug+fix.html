@@ -1,0 +1,66 @@
+---
+layout: post
+title: Finding OpenSolaris release for a bug fix
+date: '2007-10-09T21:29:00.000-05:00'
+author: Mike Gerdts
+tags: 
+modified_time: '2007-10-09T21:43:19.562-05:00'
+blogger_id: tag:blogger.com,1999:blog-12367155.post-4904121073188874012
+---
+
+I stumbled across a little bug in snv_69 today...
+
+<pre>
+&gt; $C
+000002a101e9d011 ip_find_unused_squeue+0x1ac(0, 0, 0, 60011261800, 2800, 1)
+000002a101e9d101 ip_squeue_soft_ring_affinity+0x234(3000089a668, 0, 1, 0, 60014aa4040, 2)
+000002a101e9d1c1 taskq_d_thread+0x84(60013e87dd0, 3000089d300, 6001100f298, 181c000, 12c, 6001100f2b8)
+000002a101e9d291 thread_start+4(60013e87dd0, 0, 0, 0, 0, 0)
+</pre>
+
+It looks like this is <a href="http://bugs.opensolaris.org/view_bug.do?bug_id=6582448">6582448</a> which seems to be fixed in snv_70, but I found it rather odd that the bug report said that it was fixed in the same release it was found in:
+
+<table>
+<tr><td align="right"><b>Reported Against</b></td><td>snv_70</td></tr>
+<tr><td align="right"><b>Duplicate Of</b></td><td>&nbsp;</td></tr>
+<tr><td align="right"><b>Introduced In</b></td><td>solaris_nevada</td></tr>
+<tr><td align="right"><b>Commit to Fix</b></td><td>snv_70</td></tr>
+<tr><td align="right"><b>Fixed In</b></td><td>snv_70</td></tr>
+</table>
+
+A search through the <a href="http://cvs.opensolaris.org/source/search?q=&defs=&refs=&path=&hist=6582448&project=%2Fonnv">Nevada history for this CR</a> shows:
+
+<pre>
+ip_squeue.c  4721 Tue Jul 24 00:57:32 PDT 2007 krgopi 6582448 ip_find_unused_squeue() calls cpu_get() without holding cpu_lock
+</pre>
+
+Notice the "4721" in that line.  This appears to be the Mercurial change set ID.  The corresponding <a href="http://hg.genunix.org/onnv-gate.hg/log?rev=6582448>search for 6582448 at hg.genunix.org</a> shows:
+
+<table class="logEntry parity0">
+ <tr>
+  <th class="age">2 months ago:</th>
+  <th class="firstline">6582448 ip_find_unused_squeue() calls cpu_get() without holding cpu_lock</th>
+ </tr>
+ <tr>
+
+  <th class="revision">changeset 4721:</th>
+  <td class="node"><a href="/onnv-gate.hg/rev/02352f4150be">02352f4150be</a></td>
+ </tr>
+ <tr><th class="parent">parent 4720:</th><td class="parent"><a href="/onnv-gate.hg/rev/8edc0d2e6f3f">8edc0d2e6f3f</a></td></tr>
+ <tr><th class="child">child 4722:</th><td class="child"><a href="/onnv-gate.hg/rev/9fe8664733c6">9fe8664733c6</a></td></tr>
+ 
+ <tr>
+
+  <th class="author">author:</th>
+  <td class="author">&#107;&#114;&#103;&#111;&#112;&#105;</td>
+ </tr>
+ <tr>
+  <th class="date">date:</th>
+  <td class="date">Tue Jul 24 12:57:32 2007 -0700</td>
+ </tr>
+
+ <tr>
+  <th class="files"><a href="/onnv-gate.hg/file/02352f4150be">files</a>:</th>
+  <td class="files"><a href="/onnv-gate.hg/diff/02352f4150be/usr/src/uts/common/inet/ip/ip_squeue.c">usr/src/uts/common/inet/ip/ip_squeue.c</a> </td>
+ </tr>
+</table>

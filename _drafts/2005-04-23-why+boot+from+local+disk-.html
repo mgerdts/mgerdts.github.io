@@ -1,0 +1,21 @@
+---
+layout: post
+title: Why boot from local disk?
+date: '2005-04-23T21:06:00.000-05:00'
+author: Mike Gerdts
+tags: 
+modified_time: '2005-04-23T21:49:50.763-05:00'
+blogger_id: tag:blogger.com,1999:blog-12367155.post-111431099076230373
+---
+
+In the typical data center today, there is an ongoing effort to simplify computer operations.  In most instances, this means developing standard operating procedures, standard architectures, and leveraging virtualized services for commodity operations.  Let's take a look at the last point.
+
+<span style="font-weight: bold;">Leveraging Virtualized Services</span>
+
+Whether or not a given IT organization has even considered a <span style="font-style: italic;">virtualization strategy</span> or a <span style="font-style: italic;">Service Oriented Architecture (SOA), </span> there is a high likelihood that they have already made strides in this direction.  Key areas where most everyone has made these steps are:
+
+<span style="font-weight: bold;">Networks</span> - Raise your hand if your servers are plugged into a device that only meets the classic definition of a network switch.  Most likely you didn't budge.  Most network gear these days has tons of virtualization technology... they support VLANs, QoS, routing, etc.  Through rather straight-forward configuration changes, a network port can quickly be switched from settings that make it optimal for a cluster interconnect to being optimal for a Voice over IP backbone.
+
+<span style="font-weight: bold;">Backups </span>- The days of buying every server with a tape drive and having backup operators run to each machine are long gone.  It has been recognized for a number of years now that management of backups is best accomplished using shared robotic tape libraries and a backup management/scheduling package.  Each computer that needs to be backed up is usually classified based on its role or the type of data it contains, and tapes are managed according to the type of data they contain. The initial setup is done by an expert based upon a given architecture and day-to-day management is then accomplished via a relatively junior IT worker.
+
+<span style="font-style: italic;"></span>

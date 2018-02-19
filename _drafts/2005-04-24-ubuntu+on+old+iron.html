@@ -1,0 +1,25 @@
+---
+layout: post
+title: Ubuntu on old iron
+date: '2005-04-24T08:58:00.000-05:00'
+author: Mike Gerdts
+tags: 
+modified_time: '2005-04-24T09:50:45.456-05:00'
+blogger_id: tag:blogger.com,1999:blog-12367155.post-111435114919460374
+---
+
+For a few months now I have been trying to find some time to set up an old PC for a relative to use as a place to check e-mail. I have several old boxes laying around, the fastest of which is a Pentium Pro 200 with 256 MB of RAM. Of course, it will not boot from the CDROM or network, making installation of any modern OS rather difficult. Luckily, I still had another old machine around to write boot floppies on. Now, where were my floppies again?
+
+I had a couple choices of operating systems...
+<ol>   <li>Windows... If I was going to shell out the money for proper OS license and virus protection software, I would have been better off just buying Dell's cheapest box ($250 after you take off the monitor).</li>   <li>Install Solaris 10 x86.  Unfortunately, I need to have wireless networking, which does not yet seem to be supported.</li>   <li>Install some Linux variant. The most promising free distribution (software is free, patches are free, community exists) seems to be Ubuntu.
+</li> </ol> Unfortunately Ubuntu does not seem to have a floppy installation method.  Yikes.
+
+<span style="font-weight: bold;">The road to installing Ubuntu
+<span style="font-weight: bold;">
+</span></span>Start out by installing Debian stable (woody). To do this, grab rescue.bin and root.bin from the <a href="http://ftp.us.debian.org/debian/dists/stable/main/disks-i386/current/images-1.44/">debian download site</a>  or the closest mirror. Use dd to write them to a floppy. Boot off of rescue.bin, insert root.bin when prompted.
+
+Download a <a href="http://ftp.fi.debian.org/debian-minicd/woody-i386-1.iso">debian-minicd</a>  and burn it to a CD. Pop that in the CD drive. When root.bin (above) asks you where it should look for more information, tell it to look at your CD drive and take all of the defaults it gives, so long as they make sense. :)
+
+When it gets to the point of asking if you want to add any other apt sources, use alt-f2 to get to another console and hack together ethernet support. For me, this was "modload tulip" to load my hard-wired ethernet controller's driver, followed by "dhclient" to get an IP address, default router, and DNS info. Once that seems to be working, flip back to the installation window virtual console with alt-f1 and tell it to use an HTTP apt repository.
+
+From there, I followed <a href="http://homepages.ihug.co.nz/%7Eworik/ubuntu_install.txt">these instructions</a> to upgrade from debian-stable to warty (Ubuntu 4?).  Upon completion of that I followed the upgrade instructions (section 2) to modify /etc/apt/sources.list to change all occurrences of <span style="font-style: italic;">warty</span> to <span style="font-style: italic;">hoary</span>.  Then I went through the <span style="font-style: italic;">apt-get update</span> and <span style="font-style: italic;">apt-get dist-upgrade</span> cycle again.  This got me closer to the current version.  I had read in the installation manual that it seems as though synaptic is the way you really want to manage software on the box.  I noticed it was not installed, so I went the route of <span style="font-style: italic;">apt-get install synaptic</span>.  It was while this was running that I finally found <a href="http://www.ubuntulinux.org/wiki/UserDocumentation">the documentation I was looking for before</a> I started this whole process.  Google had failed me!  There does actually seem to be concise information on how to install on an ancient system that can't boot from cdrom.
