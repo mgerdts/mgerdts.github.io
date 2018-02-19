@@ -2,14 +2,27 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
+<section class="post">
+  <div class="grid">
 
-  <div class="entry">
-    {{ content }}
-  </div>
+    <div class="unit four-fifths">
+      <article>
+        <div class="improve right hide-on-mobiles">
+        </div>
+        <h1>{{ page.title }}</h1>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+        <div class="entry">
+          {{ content }}
+        </div>
+        <div class="date">
+          Written on {{ page.date | date: "%B %e, %Y" }}
+        </div>
+      </article>
+    </div>
+
+    {% include blog_index.html %}
+
+    <div class="clear"></div>
   </div>
-</article>
+</section>
+
