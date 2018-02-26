@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  uefi debug in bhyve
-date:   2018-02-18 20:00:00 -0600
+date:   2018-02-25 20:00:00 -0600
 tags: uefi bhyve
 ---
 
@@ -16,7 +16,7 @@ There are several things involved at build time:
 
 These last two bullets are taken care of with [this changeset](https://github.com/mgerdts/uefi-edk2/commit/eeeeb9c01ecab3d0830d2e00e43a1f9d8a408c2a).  Notice that it also changes `PcdDebugIoPort` in `BhyvePkg/BhyvePkg.dec`.  I had expected that that would be sufficient to change the debug port to `COM1`, but it seemed to have no effect.
 
-Once I did this, I wasn't completely out of the woods, as I found that this [caused bhyve to crash](https://smartos.org/bugview/OS-6694) because its uart emulation only handled 1 or 2 byte operations.  uefi works 4 bytes at a time.
+Once I did this, I wasn't completely out of the woods, as I found that this [caused bhyve to crash](https://smartos.org/bugview/OS-6694) because its uart emulation only handled 1 or 2 byte operations.  uefi works 4 bytes at a time.  [Here's the fix](https://github.com/mgerdts/illumos-joyent/commit/ec04362e4d1964b7135cd7b70545ab97ce33882b).
 
 By the time you are reading this, the `bhyve` bug will probably be long fixed.  To save you the hassle of building a debug uefi image, you can snag [the one I built](https://us-east.manta.joyent.com/mgerdts/public/blog/downloads/uefi-csm-rom-debug-com1-info.bin).  You can activate that for a single bhyve zone with:
 
