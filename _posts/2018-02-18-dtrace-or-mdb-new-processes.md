@@ -4,6 +4,7 @@ title:  dtrace or mdb new processes
 date:   2018-02-18 19:57:23 -0600
 tags: dtrace mdb bhyve
 commentIssueId: 2
+tweetWidgetId: 970343435155755008
 ---
 
 I have a process that will be started later in a special context that I need to
