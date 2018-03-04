@@ -3,6 +3,7 @@ layout: post
 title:  uefi debug in bhyve
 date:   2018-02-25 20:00:00 -0600
 tags: uefi bhyve
+commentIssueId: 3
 ---
 
 While debugging a bug in [SmartOS bhyve](https://smartos.org/bugview/OS-6604) seen on Ubuntu guests, I needed to debug two areas that most people avoid: `grub` and `uefi`.  Debugging `grub` is not so bad, as you can at least add print statements and they appear on the console.  `uefi` was not quite as cooperative at first.
