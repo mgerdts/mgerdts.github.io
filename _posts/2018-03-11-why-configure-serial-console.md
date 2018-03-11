@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why must we manaually configure a serial console?"
-date:   2018-03-10 13:00:00 -0600
+date:   2018-03-11 13:00:00 -0500
 tags: acpi console bhyve
 commentIssueId: 6
 tweetWidgetId: 972902431272169472

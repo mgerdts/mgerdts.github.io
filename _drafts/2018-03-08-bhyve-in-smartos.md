@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  bhyve zones in SmartOS
-date:   2018-03-05 08:00:00 -0600
+date:   2018-03-05 20:00:00 -0600
 tags: bhyve smartos zones
-commentIssueId: 
-tweetWidgetId: 
+commentIssueId: 5
+tweetWidgetId: 971975452981018624
 ---
 
 The team at Joyent is bringing [bhyve](http://www.bhyve.org/) - The FreeBSD
