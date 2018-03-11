@@ -2,7 +2,6 @@
 layout: post
 title:  Socializing my blog
 date:   2018-03-04 10:00:00 -0600
-tags: uefi bhyve
 commentIssueId: 4
 tweetWidgetId: 970354634882764801
 ---
