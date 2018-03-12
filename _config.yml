@@ -3,5 +3,7 @@ description: Musings on virtualization and other stuff
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-midnight
+twitter_username: OMGerdts
+title_image: https://mgerdts.github.io/desktop.jpg
 plugins:
   - jekyll-feed
