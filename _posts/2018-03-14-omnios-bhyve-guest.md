@@ -25,7 +25,7 @@ Let's take that for a spin:
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  343M  100  343M    0     0  3374k      0  0:01:44  0:01:44 --:--:-- 4368k
-# zfs clone zones/omios@good zones/o1
+# zfs clone zones/omnios@good zones/o1
 # bhyve -m 16g -c 16 -l com1,stdio -P -H -s 1,lpc -s 3,virtio-blk,/dev/zvol/rdsk/zones/o1 -s 4,virtio-net-viona,o1 -l bootrom,/usr/share/bhyve/uefi-csm-rom.bin o1
 ```
 
