@@ -4,7 +4,7 @@ title:  "Why must we manually configure a serial console?"
 date:   2018-03-11 13:00:00 -0500
 tags: acpi console bhyve
 commentIssueId: 6
-tweetWidgetId: 972902431272169472
+tweet: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Why must we manually configure a serial console?<a href="https://t.co/FRiJnXkbhE">https://t.co/FRiJnXkbhE</a></p>&mdash; Mike Gerdts (@OMGerdts) <a href="https://twitter.com/OMGerdts/status/972903975514247170?ref_src=twsrc%5Etfw">March 11, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
 
 I was looking at ACPI tables in a bhyve guest and stumbled across this:
