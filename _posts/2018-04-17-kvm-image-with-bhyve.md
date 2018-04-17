@@ -3,8 +3,8 @@ layout: post
 title:  Using kvm images with bhyve
 date:   2018-04-17 17:00:00 -0500
 tags: bhyve zones
-commentIssueId: 
-tweet: Tweet coming soon
+commentIssueId: 9
+tweet: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;ve been learning more about <a href="https://twitter.com/hashtag/cloud?src=hash&amp;ref_src=twsrc%5Etfw">#cloud</a>-init and wrote up a blog post showing how kvm Ubuntu images can be updated to work well with <a href="https://twitter.com/hashtag/bhyve?src=hash&amp;ref_src=twsrc%5Etfw">#bhyve</a> too. <a href="https://t.co/FLvVOgpX4W">https://t.co/FLvVOgpX4W</a></p>&mdash; Mike Gerdts (@OMGerdts) <a href="https://twitter.com/OMGerdts/status/986374311790501890?ref_src=twsrc%5Etfw">April 17, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
 
 So far, most of my use of bhyve has been with kvm images that have been
