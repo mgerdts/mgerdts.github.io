@@ -4,7 +4,7 @@ title:  Mutual exclusion of bhyve and kvm on SmartOS
 date:   2018-03-20 09:00:00 -0500
 tags: omnios bhyve
 commentIssueId: 8
-tweetWidgetId: 976129565297987584
+tweet: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Mutual exclusion of bhyve and kvm on SmartOS <a href="https://t.co/f8g6K7W57Z">https://t.co/f8g6K7W57Z</a></p>&mdash; Mike Gerdts (@OMGerdts) <a href="https://twitter.com/OMGerdts/status/976131256986554368?ref_src=twsrc%5Etfw">March 20, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
 
 If two hypervisors are not able to coordinate with each other, they must not

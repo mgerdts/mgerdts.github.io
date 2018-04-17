@@ -4,7 +4,7 @@ title:  "ksh stack trace"
 date:   2011-01-02 19:57:23 -0600
 tags: shell
 commentIssueId: 1
-tweetWidgetId: 970353045426106368
+tweet: &nbsp;
 ---
 
 It is often times handy to get a

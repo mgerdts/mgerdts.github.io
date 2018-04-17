@@ -4,7 +4,7 @@ title:  dtrace or mdb new processes
 date:   2018-02-18 19:57:23 -0600
 tags: dtrace mdb bhyve
 commentIssueId: 2
-tweetWidgetId: 970343435155755008
+tweet: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">First non-legacy post is something I cooked up while debugging <a href="https://twitter.com/hashtag/bhyve?src=hash&amp;ref_src=twsrc%5Etfw">#bhyve</a> in a zone. <a href="https://t.co/qmYv9zXenm">https://t.co/qmYv9zXenm</a></p>&mdash; Mike Gerdts (@OMGerdts) <a href="https://twitter.com/OMGerdts/status/966717102173368320?ref_src=twsrc%5Etfw">February 22, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
 
 I have a process that will be started later in a special context that I need to

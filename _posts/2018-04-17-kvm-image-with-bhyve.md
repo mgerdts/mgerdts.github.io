@@ -4,7 +4,7 @@ title:  Using kvm images with bhyve
 date:   2018-04-17 17:00:00 -0500
 tags: bhyve zones
 commentIssueId: 
-tweetWidgetId: 
+tweet: Tweet coming soon
 ---
 
 So far, most of my use of bhyve has been with kvm images that have been

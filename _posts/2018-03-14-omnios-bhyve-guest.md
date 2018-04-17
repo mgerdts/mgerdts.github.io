@@ -4,7 +4,7 @@ title:  OmniOS bhyve guest
 date:   2018-03-14 18:00:00 -0500
 tags: omnios bhyve
 commentIssueId: 7
-tweetWidgetId: 974086921575157760
+tweet: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thanks <a href="https://twitter.com/OmniOSce?ref_src=twsrc%5Etfw">@OmniOSce</a> for making it so easy for me to create a bhyve guest on SmartOS. <a href="https://t.co/tQXyl2NsFN">https://t.co/tQXyl2NsFN</a></p>&mdash; Mike Gerdts (@OMGerdts) <a href="https://twitter.com/OMGerdts/status/974089025878454274?ref_src=twsrc%5Etfw">March 15, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
 
 I had a very pleasant surprise today.  I have some work that I need to
