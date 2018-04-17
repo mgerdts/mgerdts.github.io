@@ -1,9 +1,8 @@
 <div>
-{% if page.tweet %}
 <a id="tweet" />
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/intent/tweet?screen_name=OMGerdts&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @OMGerdts</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% if page.tweet %}
 {{ page.tweet }}
-{% else %}
-<b>FIXME:</b>
-<a href="https://publish.twitter.com/#" target="_new">Set up tweet</a>
 {% endif %}
 </div>
