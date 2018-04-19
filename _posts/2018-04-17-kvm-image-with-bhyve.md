@@ -121,4 +121,4 @@ That gets copied into the `customer_metadata` section of my `vmadm` payload.
 Notice that the `image_uuid` is for an `ubuntu-certified-16.04` image.
 
 If all goes well, a couple minutes after running `vmadm create`, you will notice
-the grub meny on the console.
+the grub menu on the console.
