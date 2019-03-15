@@ -7,6 +7,8 @@ commentIssueId: 8
 tweet: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Mutual exclusion of bhyve and kvm on SmartOS <a href="https://t.co/f8g6K7W57Z">https://t.co/f8g6K7W57Z</a></p>&mdash; Mike Gerdts (@OMGerdts) <a href="https://twitter.com/OMGerdts/status/976131256986554368?ref_src=twsrc%5Etfw">March 20, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
 
+**Note**: This post is of historical interest only.  With the [fix](https://github.com/joyent/illumos-joyent/commit/befffd577ca6c3a090d7d3c72d267a383c3a3c45) for [OS-7080](https://smartos.org/bugview/OS-7080) in July of 2018 bhyve and kvm can coexist in peace.
+
 If two hypervisors are not able to coordinate with each other, they must not
 both use hardware viritualization.  Within SmartOS, there is a pair of
 functions, `hvm_excl_hold()` and `hvm_excl_rele()`, described by [this
